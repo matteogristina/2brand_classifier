@@ -6,10 +6,15 @@ This project implements and trains a deep learning model to classify images of c
 
 ## Dataset
 
--   **Source:** [Stanford Cars Dataset](http://ai.stanford.edu/~jkrause/cars/car_dataset.html)
+-   **Source:** [Stanford Cars Dataset](https://web.archive.org/web/20200315211720/https://ai.stanford.edu/~jkrause/cars/car_dataset.html)
 -   **Filtering:** The dataset is filtered to include only specific classes corresponding to various Audi and BMW models (classes 12-38).
 -   **Labels:** Images are assigned binary labels: 0 for Audi (classes 12-25) and 1 for BMW (classes 26-38).
 -   **Bounding Boxes:** Bounding box coordinates provided in the dataset are used to crop the images, focusing the model's attention on the car itself before resizing and further processing.
+
+Citation:<br>
+**3D Object Representations for Fine-Grained Categorization** <br>
+Jonathan Krause, Michael Stark, Jia Deng, Li Fei-Fei<br>
+*4th IEEE Workshop on 3D Representation and Recognition, at ICCV 2013* **(3dRR-13)**. Sydney, Australia. Dec. 8, 2013.
 
 ## Model Architecture
 
@@ -69,6 +74,6 @@ The confusion matrix below visualizes the model's performance on the test set:
 -   Seaborn
 -   openpyxl (for reading Excel files)
 
-You can install dependencies using pip:
+You can install dependencies using pip (not tested):
 ```bash
 pip install tensorflow pandas scikit-learn Pillow matplotlib seaborn openpyxl
