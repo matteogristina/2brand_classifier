@@ -77,3 +77,25 @@ The confusion matrix below visualizes the model's performance on the test set:
 You can install dependencies using pip (not tested):
 ```bash
 pip install tensorflow pandas scikit-learn Pillow matplotlib seaborn openpyxl
+```
+
+### Classify Your Own Images
+
+```bash
+$ python3 classify.py /folder/image_you_want_to_classify.jpg
+```
+
+Example:
+
+```bash
+$ python3 classify.py pUCGMbdP-2.ykqfdlk028.jpg
+[WARNING/CUDA MESSAGES OMITTED]
+Model 'audi_bmw_resnet_final_224.keras' loaded successfully.
+Loading image from: pUCGMbdP-2.ykqfdlk028.jpg
+Image 'pUCGMbdP-2.ykqfdlk028.jpg' loaded and preprocessed.
+1/1 ━━━━━━━━━━━━━━━━━━━━ 1s 1s/step
+Raw prediction output: [[0.9989589]]
+New output: [1]
+Prediction: BMW (Confidence: 99.90%)
+```
+
