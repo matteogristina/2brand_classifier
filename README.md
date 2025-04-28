@@ -83,7 +83,10 @@ You can install dependencies using pip (not tested):
 pip install tensorflow pandas scikit-learn Pillow matplotlib seaborn openpyxl
 ```
 
-### Classify Your Own Images
+## Classify Your Own Images
+
+
+### Python Script on Command Line 
 
 ```bash
 $ python3 classify.py /folder/image_you_want_to_classify.jpg
@@ -102,4 +105,23 @@ Raw prediction output: [[0.9989589]]
 New output: [1]
 Prediction: BMW (Confidence: 99.90%)
 ```
+
+### Streamlit (localhost)
+
+```bash
+$ streamlit run app.py
+```
+
+
+```bash
+$ streamlit run app.py
+...
+You can now view your Streamlit app in your browser.
+
+Local URL: http://localhost:8501
+Network URL: http://<your_network_ip>:8501
+```
+Then navigate to the localhost link provided if not automatically re-directed.
+
+
 
