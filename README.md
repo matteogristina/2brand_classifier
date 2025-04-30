@@ -70,12 +70,12 @@ The confusion matrix below visualizes the model's performance on the test set wi
 ### Prerequisites
 
 -   Python 3.x
--   TensorFlow
--   Pandas
--   Scikit-learn
--   Pillow (PIL Fork)
--   Matplotlib
--   Seaborn
+-   TensorFlow (and Keras) - import base model, construct additional layers, build, train, and deploy the final neural network
+-   Pandas - manages dataset using DataFrames
+-   Scikit-learn - for splitting training dataset into Stratified K-Fold
+-   Pillow (PIL Fork) - working directly with image files, used in pre-processing
+-   Matplotlib - plotting and vizualizing training metrics, and testing stats
+-   Seaborn - allows for more informative statistical 1  graphics
 -   openpyxl (for reading Excel files)
 
 You can install dependencies using pip (not tested):

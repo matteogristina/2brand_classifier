@@ -10,18 +10,18 @@ st.set_page_config(page_title="Audi vs BMW Classifier", layout="centered")
 IMG_SIZE = (224, 224)
 MODEL_PATH = "audi_bmw_resnet_final_224.keras"
 
-# Load model with caching
+# Load model with caching so the recent results are saved
 @st.cache_resource
 def load_resnet_model():
     return load_model(MODEL_PATH)
 
 model = load_resnet_model()
 
-# --- UI ---
+# Main heading/text
 st.title("🚗 Audi vs BMW Image Classifier")
 st.write("Upload a car image to classify it as either Audi or BMW.")
 
-# File uploader
+# File uploader to easily integrate images
 uploaded_file = st.file_uploader(
     "",
     type=["jpg", "jpeg", "png"],
@@ -40,7 +40,7 @@ if uploaded_file is not None:
     img_array = np.expand_dims(img_array, axis=0)
     img_preprocessed = preprocess_input(img_array)
 
-    # Predict
+    # Make prediction
     prediction = model.predict(img_preprocessed)
     confidence = prediction[0][0]
 
